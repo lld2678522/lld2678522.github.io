@@ -1,0 +1,297 @@
+
+<!DOCTYPE html>
+<html lang="来迪小站">
+    <!DOCTYPE html>
+<html lang="来迪小站">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  
+    <link rel="icon" href="/img/favicon.ico">
+
+  
+      <meta name="author" content="LaiDiLi">
+  
+  
+      <meta name="subtitle" content="来迪小站">
+  
+  
+      <meta name="description" content="来迪小站-个人博客">
+  
+  
+  
+    <link rel="alternate" href="/atom.xml " title="来迪小站" type="application/atom+xml">
+  
+  
+  <title>来迪小站</title>
+  
+  
+
+  
+
+  
+  
+    
+      <link rel="stylesheet" href="/css/style.css">
+    
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css">
+    
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.css">
+    
+    
+
+  
+    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin="">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;700&amp;display=swap"  media="print" onload="this.media='all'">
+  
+
+  
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10.0.3/styles/github.min.css">
+    
+
+<meta name="generator" content="Hexo 4.2.1"></head>
+</html>
+
+    
+
+
+<header class="header">
+    <div class="title animated fadeInDown">
+    <div class="title">
+        <a href="/" class="logo">来迪小站</a>
+    </div>
+    </div> 
+    <div class="navbar animated fadeInDown">
+        <div class="motto">
+            <h2>Do what you love,love what you do.</h2>
+        </div>
+
+</header>
+
+
+
+    
+<script src="https://www.layuicdn.com/layui-v2.5.6/layui.js"></script> 
+<div class="nav index" style="height: 60px;">
+    <div class="title animated fadeInDown">
+        <div class="layui-container"> 
+        
+            <div class="nav-logo"> <a href="https://github.com/a2396837" target="_blank" rel="noopener" title="一时开源一时爽，一直开源一直爽"><i class="fab fa-github" style="font-size: 36px;"></i></a> </div>
+         
+        <div class="nav-list">
+            <button> <span class=""></span><span style="display: block;"></span><span class=""></span> </button>
+            <ul class="layui-nav" lay-filter="">
+            
+            <li class="layui-nav-item">
+                <a href="/">
+                    <i class="fab fa-fort-awesome" aria-hidden="true"></i>
+                    Home
+                </a>
+            </li>
+            
+            <li class="layui-nav-item">
+                <a href="/archives/">
+                    <i class="far fa-calendar-check" aria-hidden="true"></i>
+                    Archives
+                </a>
+            </li>
+            
+            <li class="layui-nav-item">
+                <a href="/tags/">
+                    <i class="fas fa-hashtag" aria-hidden="true"></i>
+                    Tags
+                </a>
+            </li>
+            
+            <li class="layui-nav-item">
+                <a href="/about/">
+                    <i class="fab fa-grav" aria-hidden="true"></i>
+                    About
+                </a>
+            </li>
+            
+            <li class="layui-nav-item">
+                <a href="/guestbook/">
+                    <i class="fab fa-telegram" aria-hidden="true"></i>
+                    Guestbook
+                </a>
+            </li>
+            
+            <li class="layui-nav-item">
+                <a href="/link/">
+                    <i class="fab fa-weixin" aria-hidden="true"></i>
+                    Friends
+                </a>
+            </li>
+            
+            <li class="layui-nav-item">
+            
+                <div id="dark" onclick="switchDarkMode()"></div>   
+                <script>
+                    if(localStorage.getItem('dark') === '1') {
+                        document.body.classList.add('dark');
+                    }
+                    document.getElementById('dark').innerHTML = document.querySelector("body").classList.contains("dark")?"🌙":"🌞";
+                </script>
+              
+            </li>  
+            <span class="layui-nav-bar" style="left: 342px; top: 78px; width: 0px; opacity: 0;"></span>
+            </ul>
+        </div>
+        </div>
+    </div>
+</div>
+
+
+
+    
+
+  <div id="recent-posts">
+    
+      <div class="recent-post-item">
+          <div class="index_post_title">
+            <a href="/2020/05/22/index/">index</a>
+          </div>
+          <div class="content">
+            
+            <h1 id="Selenium和Scrapy使用代理ip学习"><a href="#Selenium和Scrapy使用代理ip学习" class="headerlink" title="Selenium和Scrapy使用代理ip学习"></a>Selenium和Scrapy使用代理ip学习</h1><h2 id="Selenium-设置代理ip"><a href="#Selenium-设置代理ip" class="headerlink" title="Selenium 设置代理ip"></a>Selenium 设置代理ip</h2><h3 id="google-chrome"><a href="#google-chrome" class="headerlink" title="google chrome"></a>google chrome</h3><pre><code>proxyStr = &apos;--proxy-server=http://%s&apos;% ip
+options.add_argument(proxyStr)
+driver = webdriver.Chrome(executable_path=driver_path, options=options)</code></pre><h3 id="PhantomJS"><a href="#PhantomJS" class="headerlink" title="PhantomJS"></a>PhantomJS</h3><pre><code>proxy = Proxy({
+       &apos;proxyType&apos;: ProxyType.MANUAL,
+       &apos;httpProxy&apos;: ip
+ })
+# 新建一个‘期望技能’？？？
+desired_capabilities = DesiredCapabilities.PHANTOMJS.copy()
+# 把代理ip加入到技能中
+proxy.add_to_capabilities(desired_capabilities)
+driver = webdriver.PhantomJS(executable_path=driver_path,                     desired_capabilities=desired_capabilities)</code></pre><h2 id="Scrapy设置代理ip"><a href="#Scrapy设置代理ip" class="headerlink" title="Scrapy设置代理ip"></a>Scrapy设置代理ip</h2><pre><code>class DownloaderMiddleware(object):
+    def process_request(self, request, spider):
+        request.meta[&apos;proxy&apos;] = ip</code></pre><h2 id="Scrapy解决代理ip失效问题"><a href="#Scrapy解决代理ip失效问题" class="headerlink" title="Scrapy解决代理ip失效问题"></a>Scrapy解决代理ip失效问题</h2><ul>
+<li><p>创建Middleware类继承RetryMiddleware，重写process_exception方法</p>
+<pre><code>class exMiddleware(RetryMiddleware):
+    def process_exception(self, request, exception, spider):
+        ## 针对超时和无响应的reponse,获取新的IP,设置到request中，然后重新发起请求
+        print(str(exception))
+        # ip失效时出现的异常
+        if &apos;10061&apos; in str(exception) or &apos;10060&apos; in str(exception) 
+            or &apos;Connection refused&apos; in str(exception) or &apos;113&apos; in str(exception):
+        # 重新获取你的ip
+        ip = new_ip()
+
+        if isinstance(exception, self.EXCEPTIONS_TO_RETRY) and not 
+            request.meta.get(&apos;dont_retry&apos;, False):
+        return self._retry(request, exception, spider)</code></pre></li>
+</ul>
+<ul>
+<li>设置settings.py文件替换Middleware文件</li>
+</ul>
+<pre><code>DOWNLOADER_MIDDLEWARES = {
+       &apos;WeiBoTop500.middlewares.Weibotop500DownloaderMiddleware&apos;: 543,
+       # 默认使用的异常Middleware类设置为不使用
+       &quot;scrapy.downloadermiddlewares.retry.RetryMiddleware&quot;: None,
+       # 重写的异常Middleware类
+       &apos;WeiBoTop500.middlewares.exMiddleware&apos;: 544,
+    }</code></pre><ul>
+<li>需要注意的 不同的python环境RetryMiddleware文件的位置有可能不同<br> 可以在scrapy启动日志中找到RetryMiddleware文件的位置</li>
+</ul>
+
+            
+          </div>
+      </div>
+      <div class="post-footer">
+        <a class="date" href="/2020/05/22/index/"><i class="far fa-calendar-alt" aria-hidden="true"></i> 2020/5/22</a>
+        <div class="top">
+          
+        </div>
+        <div class="readmore"><a href="/2020/05/22/index/">阅读全文 »</a></div>   
+    </div>
+    
+
+  </div>
+
+
+<div class="paginator">
+      <span class="page-number current">1</span>
+  </div>
+  <br>
+    
+<a id="gotop" href="javascript:" title="返回顶部"><i class="fa fa-arrow-up" aria-hidden="true"></i></a>
+<script>
+    window.onscroll = function() {scrollFunction()};
+     
+    function scrollFunction() {console.log(121);
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            document.getElementById("gotop").style.display = "block";
+        } else {
+            document.getElementById("gotop").style.display = "none";
+        }
+    }
+     
+    function topFunction() {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+    }
+    </script>
+    
+
+
+
+
+
+
+    
+<div id="bottom-outer">
+    <div id="bottom-inner">
+        © 2020 <i class="fa fa-heart" id="heart"></i> LaiDiLi 
+        <br>
+        Powered by 
+        <a href="http://hexo.io" target="_blank" rel="noopener">hexo</a> | Theme is <a href="https://github.com/a2396837/hexo-theme-blank/" target="_blank" rel="noopener">blank</a>
+        
+    </div>  
+  </div>
+  
+
+
+
+    
+      <script src="/js/script.js"></script>
+    
+      <script src="https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js"></script>
+    
+      <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.0.3/build/highlight.min.js"></script>
+    
+      <script src="https://cdn.jsdelivr.net/npm/highlightjs-line-numbers.js@2.7.0/dist/highlightjs-line-numbers.min.js"></script>
+    
+  
+  
+  
+    <script>
+      $("img").not('.page img').not('.nav-logo img').each(function () {
+      var element = document.createElement("a");
+      $(element).attr("data-fancybox", "gallery");
+      $(element).attr("href", $(this).attr("src"));
+      $(this).wrap(element);
+      });
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js"></script>
+    
+  
+    <script>
+      var btntop = $('#gotop');
+        btntop.on('click', function (e) {
+          e.preventDefault();
+          $('html, body').animate({ scrollTop: 0 }, '300');
+        });
+      </script>
+      
+    <script>
+      $(document).ready(function() {
+          $('code.hljs').each(function(i, block) {
+              hljs.lineNumbersBlock(block);
+          });
+      });
+    </script>
+
+
+
+</html>
